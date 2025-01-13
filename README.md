@@ -19,10 +19,45 @@ It scans the binary image to identify walls and free spaces and maps the maze on
 It also calculates the start and goal positions by analyzing the maze image, ensuring that the start is at the top (first available free space) and the goal is at the bottom.
 
 The binary representation is crucial as it simplifies the maze into a graph of cells that can be processed by the pathfinding algorithm.
-By turning the maze into a 2D array of binary values (0 for free space, 1 for obstacles), the algorithm can focus on navigating the open spaces and avoiding walls. This grid-based approach aligns perfectly with the A* algorithm’s requirement for a clear distinction between navigable space and obstacles.
+By turning the maze into a 2D array of binary values, the algorithm can focus on navigating the open spaces and avoiding walls. This grid-based approach aligns perfectly with the A* algorithm’s requirement for a clear distinction between navigable space and obstacles.
 
  **Path Planning:** 
 - The A* algorithm calculates the shortest path from **start** to **goal**, avoiding obstacles.
+
+## How Code Runs the Path Planning/ Description of the A* Algorithm
+The A* (A-star) algorithm is a widely used pathfinding and graph traversal algorithm that finds the shortest path between two points. It is commonly used in robotics, video games, and other applications requiring efficient path planning. 
+
+The algorithm combines the strengths of:
+- **Dijkstra's Algorithm:** Guarantees the shortest path but can be slow.
+- **Greedy Best-First Search:** Faster but doesn't guarantee the shortest path.
+
+## How A* Works:
+
+### 1. **Heuristic Function (`h(n)`):**
+   - A* uses a heuristic function `h(n)` to estimate the cost from the current node to the goal.
+   - This guides the search toward the goal efficiently.
+
+### 2. **Cost Function (`f(n)`):**
+   The total cost for a node `n` is calculated as:
+   f(n) = g(n) + h(n)
+
+- `g(n)` → The actual cost from the start node to the current node `n`.
+- `h(n)` → The estimated cost from the current node `n` to the goal.
+
+### 3. **Open and Closed Lists:**
+- **Open List:** Nodes that need to be evaluated. The node with the lowest `f(n)` is expanded first.
+- **Closed List:** Nodes that have already been evaluated.
+
+### 4. **Process:**
+- Start from the initial node and add it to the **Open List**.
+- While the **Open List** is not empty:
+  - Select the node with the lowest `f(n)` value.
+  - If this node is the goal, reconstruct the path and return it.
+  - Otherwise, move the node to the **Closed List** and expand its neighbors.
+  - For each neighbor, calculate `f(n)` and add it to the **Open List** if not already processed.
+
+### 5. **Termination:**
+- The algorithm stops when the goal node is reached or when the **Open List** is empty (indicating no path exists).
 
 **Visualization:** 
 - The maze and the computed path are visualized using OpenCV for better understanding.
@@ -99,40 +134,7 @@ python3 astar.py  --image_path_of_maze.png # add the argument here of the image 
 python3 astar_with_animation.py  --image_path_of_maze.png # add the argument here of the image path
 ```
 
-## Description of the A* Algorithm
-The A* (A-star) algorithm is a widely used pathfinding and graph traversal algorithm that finds the shortest path between two points. It is commonly used in robotics, video games, and other applications requiring efficient path planning. 
 
-The algorithm combines the strengths of:
-- **Dijkstra's Algorithm:** Guarantees the shortest path but can be slow.
-- **Greedy Best-First Search:** Faster but doesn't guarantee the shortest path.
-
-## How A* Works:
-
-### 1. **Heuristic Function (`h(n)`):**
-   - A* uses a heuristic function `h(n)` to estimate the cost from the current node to the goal.
-   - This guides the search toward the goal efficiently.
-
-### 2. **Cost Function (`f(n)`):**
-   The total cost for a node `n` is calculated as:
-   f(n) = g(n) + h(n)
-
-- `g(n)` → The actual cost from the start node to the current node `n`.
-- `h(n)` → The estimated cost from the current node `n` to the goal.
-
-### 3. **Open and Closed Lists:**
-- **Open List:** Nodes that need to be evaluated. The node with the lowest `f(n)` is expanded first.
-- **Closed List:** Nodes that have already been evaluated.
-
-### 4. **Process:**
-- Start from the initial node and add it to the **Open List**.
-- While the **Open List** is not empty:
-  - Select the node with the lowest `f(n)` value.
-  - If this node is the goal, reconstruct the path and return it.
-  - Otherwise, move the node to the **Closed List** and expand its neighbors.
-  - For each neighbor, calculate `f(n)` and add it to the **Open List** if not already processed.
-
-### 5. **Termination:**
-- The algorithm stops when the goal node is reached or when the **Open List** is empty (indicating no path exists).
 
 ---
 # Acknowledgements
