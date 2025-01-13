@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+pyamaze/__init__.py
+pyamaze/pyamaze.py
+pyamaze.egg-info/PKG-INFO
+pyamaze.egg-info/SOURCES.txt
+pyamaze.egg-info/dependency_links.txt
+pyamaze.egg-info/top_level.txt
