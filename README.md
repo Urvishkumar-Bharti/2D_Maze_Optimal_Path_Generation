@@ -32,13 +32,17 @@ By turning the maze into a 2D array of binary values (0 for free space, 1 for ob
 
 **Output:**
 - The program generates the optimal path and visualizes it on the maze.
-![Alt text](images/final_output.png)
-[Watch the video](images/outputvideo.avi)
+![Alt text](images/final_output.png)<br>
+
+https://github.com/Urviskumar/2D_Maze_Optimal_Path_Generation/blob/main/images/outputvideo.avi
+
 
 ## Files in the Repository
 - `maze.py`: Contains the Maze class, which loads particular image of this project only and processes a maze image, converts it into a binary grid, and identifies the start and goal positions. The class also creates a map of the maze, showing available movement directions for the pathfinding algorithm.
 
 - `simple_img_to_maze_generation.py`: Converts any maze image into a binary grid format for use in path planning.
+
+- `1maze_array.txt` : I have also created the 2D array of the image being used in this project.
 
 - `astar.py`: Implements the A* algorithm to find the shortest path from the start to the goal using the maze grid generated from the image.
 
@@ -56,7 +60,6 @@ By turning the maze into a 2D array of binary values (0 for free space, 1 for ob
 - Python 3.x
 - opencv-python==4.10.0.84
 - numpy==1.21.5
-
 
 ### Installation
 Clone the repository to your local machine:
@@ -87,7 +90,7 @@ python3 astar.py  --image_path_of_maze.png # add the argument here of the image 
 
 - A_Star and robot moving through the path generated
 ```bash
-python3 astar_with_animation.py  --image_path_of_maze.png
+python3 astar_with_animation.py  --image_path_of_maze.png # add the argument here of the image path
 ```
 
 ## Description of the A* Algorithm
@@ -134,7 +137,6 @@ The algorithm combines the strengths of:
 - Efficiently balances **exploration** (searching new areas) and **exploitation** (focusing on promising areas).
 
 ---
-
 # Acknowledgements
 
 ## Maze Generator
@@ -145,31 +147,3 @@ Citation:
 MAN1986. 2023. python-maze. GitHub repository. https://github.com/MAN1986
 ```
 
-# Citation
-
-To cite this project or the GitHub profile in your work, please use the following formats:
-
-## APA Style
-
-**Project "A-Star Algorithm for Maze Solving":**
-```
-Mawio02. (2023). A-Star Algorithm for Maze Solving. Retrieved from https://github.com/Mawio02/A-Star-Algorithm-for-Maze-Solving
-```
-
-## BibTeX Style
-
-**Project "A-Star Algorithm for Maze Solving":**
-```bibtex
-@misc{Mawio02_astar_maze,
-  author = {Mawio02},
-  title = {A-Star Algorithm for Maze Solving},
-  year = {2023},
-  howpublished = {\url{https://github.com/Mawio02/A-Star-Algorithm-for-Maze-Solving}}
-}
-```
-
-## Contributing
-Contributions to the Micromouse Maze Solver are welcome. 
-
-## License
-This project is licensed under the MIT License - see the `LICENSE.md` file for details.
