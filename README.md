@@ -32,7 +32,13 @@ By turning the maze into a 2D array of binary values (0 for free space, 1 for ob
 
 **Output:**
 - The program generates the optimal path and visualizes it on the maze.
+
+`astar.py`
+
 ![Alt text](images/final_output.png)<br>
+
+
+`astar_with_animation.py`
 
 ![Solution Gif](images/outputvideo.gif)<br>
 
