@@ -67,6 +67,8 @@ The algorithm combines the strengths of:
 
 **Input:**
 - The maze can be provided as an image (`.png`) or a text file (2D array).
+![Alt text](images/maze.png)<br>
+
 
 **Output:**
 - The program generates the optimal path and visualizes it on the maze.
@@ -114,7 +116,7 @@ Navigate to the repository
 ```bash 
 cd ~/2D_Maze_Optimal_Path_Generation
 ```
-Create virtual environment :
+Create a virtual environment in python3:
 ```bash
 python3 -m venv path_planning
 ```
@@ -137,6 +139,35 @@ python3 astar.py  --image_path_of_maze.png # add the argument here of the image 
 python3 astar_with_animation.py  --image_path_of_maze.png # add the argument here of the image path
 ```
 
+### 2. Motion Planning Considerations for a Robotic Arm Tracing a Maze
+
+The robot and maze image coordinate systems should be aligned and the position of the pen tip relative to the robot’s end effector must be precisely defined and calibrated.
+
+The robotic arm needs to have a sufficient number of degrees of freedom (DOF) to perform the task. The DOF determines the number of independent movements the arm can make. For a planar maze traversal, at least 3 DOF are required (two for planar movement and one for orientation control of the pen).
+
+Reachability: The entire maze surface should be within the reachable workspace of the robot's end-effector. The arm should be able to orient the pen correctly at every point in the maze for accurate tracing.
+
+Control the motion of individual joints to achieve the desired end-effector position and sensors should provide real-time feedback for position and orientation of the end effector.
+
+### 3. Motion Planning Considerations for a Mobile Robot Tracing a Maze
+
+Perception:-
+The robot needs to be equipped with sensors like LiDAR and cameras for environmental perception. LiDAR can help detect obstacles and measure distances, while cameras can assist in visual feature detection for localization and mapping.
+
+State Estimation and Localization:-
+The robot must estimate its position and velocity within the maze to understand its current location. This can be achieved using state estimation techniques like Extended Kalman Filter (EKF) or Particle Filter, along with data from wheel odometry, IMUs, and visual sensors.
+
+Mapping and SLAM:-
+If the maze map is unknown, the robot must create it in real-time while navigating. Simultaneous Localization and Mapping (SLAM) techniques like GMapping or Cartographer can help the robot build a map while localizing itself. A pre-existing map can also be used if available, provided it is accurately aligned with the robot's coordinate frame.
+
+Path Planning and Trajectory Generation:-
+The A* algorithm, as implemented in the project, can be extended for mobile robots by considering a grid-based map representation of the maze. The algorithm helps generate an optimal trajectory.
+
+Collision Avoidance:
+LiDAR data can be used for real-time collision detection and avoidance, ensuring the robot can adjust its trajectory dynamically.
+
+Control and Actuation:
+The robot's motion system needs to be controlled using techniques like PID control or MPC for differential drive systems.
 
 
 ---
