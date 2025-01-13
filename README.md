@@ -3,7 +3,7 @@
 ## Project Description
 This project solves a **2D maze navigation** problem using the A* algorithm. The objective is to guide a robot from the **entrance** (top of the maze) to the **exit** (bottom of the maze) by parsing a maze image and generating an optimal path.
 
-###  1: Code Implementation and Descreption
+###  1: Code Implementation and Description
 
 ### **Key Features:**
 **Maze Representation:** <br>
