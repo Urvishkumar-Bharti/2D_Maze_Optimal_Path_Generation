@@ -3,6 +3,8 @@
 ## Project Description
 This project solves a **2D maze navigation** problem using the A* algorithm. The objective is to guide a robot from the **entrance** (top of the maze) to the **exit** (bottom of the maze) by parsing a maze image and generating an optimal path.
 
+###  1: Code Implementation and Descreption
+
 ### **Key Features:**
 **Maze Representation:** <br>
 The maze image is first parsed, and its content is used to create a grid representation of the maze where each cell indicates whether it is a free path or an obstacle.<br>
@@ -45,15 +47,16 @@ The algorithm combines the strengths of:
 - `h(n)` → The estimated cost from the current node `n` to the goal.
 
 ### 3. **Open and Closed Lists:**
-- **Open List:** Nodes that need to be evaluated. The node with the lowest `f(n)` is expanded first.
-- **Closed List:** Nodes that have already been evaluated.
+- **Open List:** This contains nodes that need to be evaluated. The node with the lowest f(n) value is expanded first. This process is commonly implemented using a Priority Queue. 
+
+- In Python, the 'queue' module can be used to manage the priority queue, ensuring that nodes are processed in the correct order based on their priority, typically selecting the node with the lowest f(n) value. The priority queue helps maintain the order in which nodes are evaluated, using a mechanism that can prioritize nodes based on either FIFO (First In, First Out) or LIFO (Last In, First Out), depending on the use case.
 
 ### 4. **Process:**
 - Start from the initial node and add it to the **Open List**.
 - While the **Open List** is not empty:
   - Select the node with the lowest `f(n)` value.
   - If this node is the goal, reconstruct the path and return it.
-  - Otherwise, move the node to the **Closed List** and expand its neighbors.
+  - Otherwise, expand its neighbors.
   - For each neighbor, calculate `f(n)` and add it to the **Open List** if not already processed.
 
 ### 5. **Termination:**
