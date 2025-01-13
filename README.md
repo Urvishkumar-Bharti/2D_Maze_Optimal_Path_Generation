@@ -106,8 +106,6 @@ The algorithm combines the strengths of:
 - **Dijkstra's Algorithm:** Guarantees the shortest path but can be slow.
 - **Greedy Best-First Search:** Faster but doesn't guarantee the shortest path.
 
----
-
 ## How A* Works:
 
 ### 1. **Heuristic Function (`h(n)`):**
@@ -137,28 +135,22 @@ The algorithm combines the strengths of:
 - The algorithm stops when the goal node is reached or when the **Open List** is empty (indicating no path exists).
 
 ---
-
-## **Advantages of A*:**
-- Guarantees the shortest path if the heuristic is **admissible** (does not overestimate the cost).
-- Efficiently balances **exploration** (searching new areas) and **exploitation** (focusing on promising areas).
-
----
 # Acknowledgements
 
 ## Maze Generator
-This project utilizes the maze generator and map the image into A* algorithm logic from the [pyamaze Public](https://github.com/MAN1986/pyamaze/blob/main/pyamaze/pyamaze.py) project by [MAN1986](https://github.com/MAN1986). 
+This project utilizes the maze generator and map the image into A* algorithm for which logic is taken from the [pyamaze Public](https://github.com/MAN1986/pyamaze/blob/main/pyamaze/pyamaze.py) project by [MAN1986](https://github.com/MAN1986). 
 
-## AI Assistance
+## AI Assistance - ChatGPT
 
 This project also benefited from Chat AI solutions to optimize the implementation, which include the following:
 
-Integrating the generated maze into the path planning file: Guidance was provided on how to leverage the maze format in path planning.
+- Integrating the generated maze into the path planning file: Guidance was provided on how to leverage the maze format in path planning.
 
-Determining start and goal positions from the maze's binary image: Solutions were shared for effectively extracting start and goal points from a binary maze image.
+- Determining start and goal positions from the maze's binary image: Solutions were shared for effectively extracting start and goal points from a binary maze image.
 
-Using the Priority Queue in A*: Advice was offered on efficiently using a Priority Queue in A* to ensure optimal pathfinding.
+- Using the Priority Queue in A*: Advice was offered on efficiently using a Priority Queue in A* to ensure optimal pathfinding.
 
-Animating the path: Support was provided for visualizing the robot's movement along the generated A* path in a video format.
+- Animating the path: Support was provided for visualizing the robot's movement along the generated A* path in a video format.
 
 Citation:
 ```
