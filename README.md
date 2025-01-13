@@ -34,7 +34,7 @@ By turning the maze into a 2D array of binary values (0 for free space, 1 for ob
 - The program generates the optimal path and visualizes it on the maze.
 ![Alt text](images/final_output.png)<br>
 
-https://github.com/Urviskumar/2D_Maze_Optimal_Path_Generation/blob/2d838ef38023ccdc1406ac9b3d61d679d13a0ade/images/outputvideo.avi<br>
+![Solution Gif](images/outputvideo.gif)<br>
 
 
 ## Files in the Repository
