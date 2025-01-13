@@ -61,11 +61,11 @@ By turning the maze into a 2D array of binary values (0 for free space, 1 for ob
 ### Installation
 Clone the repository to your local machine:
 ```bash
-git clone [repository-url]
+git clone https://github.com/Urviskumar/2D_Maze_Optimal_Path_Generation.git
 ```
 Navigate to the repository
 ```bash 
-cd ~/
+cd ~/2D_Maze_Optimal_Path_Generation
 ```
 Create virtual environment :
 ```bash
@@ -137,12 +137,12 @@ The algorithm combines the strengths of:
 
 # Acknowledgements
 
-## Random Maze Generator
-This project utilizes the random maze generator from the [python-maze](https://github.com/guofei9987/python-maze) project by [guofei9987](https://github.com/guofei9987). The maze generator adds a dynamic and unpredictable element to the maze-solving experience, making the Micromouse Maze Solver more versatile and challenging. We thank guofei9987 for their contribution to the open-source community and for providing a robust tool that enhances our project.
+## Maze Generator
+This project utilizes the maze generator and map the image into A* algorithm logic from the [pyamaze Public](https://github.com/MAN1986/pyamaze/blob/main/pyamaze/pyamaze.py) project by [MAN1986](https://github.com/MAN1986). 
 
 Citation:
 ```
-guofei9987. 2023. python-maze. GitHub repository. https://github.com/guofei9987/python-maze
+MAN1986. 2023. python-maze. GitHub repository. https://github.com/MAN1986
 ```
 
 # Citation
