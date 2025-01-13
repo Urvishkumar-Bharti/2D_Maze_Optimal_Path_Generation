@@ -35,6 +35,7 @@ By turning the maze into a 2D array of binary values (0 for free space, 1 for ob
 ![Alt text](images/final_output.png)<br>
 
 [![Output Video](https://github.com/Urviskumar/2D_Maze_Optimal_Path_Generation/blob/main/images/outputvideo.avi)](./images/outputvideo.avi)
+https://github.com/Urviskumar/2D_Maze_Optimal_Path_Generation/blob/main/images/outputvideo.avi
 
 ## Files in the Repository
 - `maze.py`: Contains the Maze class, which loads particular image of this project only and processes a maze image, converts it into a binary grid, and identifies the start and goal positions. The class also creates a map of the maze, showing available movement directions for the pathfinding algorithm.
