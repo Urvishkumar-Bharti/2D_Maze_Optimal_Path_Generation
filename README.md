@@ -148,6 +148,18 @@ The algorithm combines the strengths of:
 ## Maze Generator
 This project utilizes the maze generator and map the image into A* algorithm logic from the [pyamaze Public](https://github.com/MAN1986/pyamaze/blob/main/pyamaze/pyamaze.py) project by [MAN1986](https://github.com/MAN1986). 
 
+## AI Assistance
+
+This project also benefited from Chat AI solutions to optimize the implementation, which include the following:
+
+Integrating the generated maze into the path planning file: Guidance was provided on how to leverage the maze format in path planning.
+
+Determining start and goal positions from the maze's binary image: Solutions were shared for effectively extracting start and goal points from a binary maze image.
+
+Using the Priority Queue in A*: Advice was offered on efficiently using a Priority Queue in A* to ensure optimal pathfinding.
+
+Animating the path: Support was provided for visualizing the robot's movement along the generated A* path in a video format.
+
 Citation:
 ```
 MAN1986. 2023. python-maze. GitHub repository. https://github.com/MAN1986
