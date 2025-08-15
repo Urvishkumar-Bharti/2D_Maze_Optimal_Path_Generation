@@ -112,7 +112,7 @@ The algorithm combines the strengths of:
 ### Installation
 Clone the repository to your local machine:
 ```bash
-git clone https://github.com/Urviskumar/2D_Maze_Optimal_Path_Generation.git
+git clone https://github.com/Urvishkumar-Bharti/2D_Maze_Optimal_Path_Generation.git
 ```
 Navigate to the repository
 ```bash 
